@@ -18,6 +18,8 @@ public:
 
     void sortNode();
 
+    void fetchNode();
+
 private:
     void sort(bool (*cmp)(const ListNode<Account>&, const ListNode<Account>&));
 

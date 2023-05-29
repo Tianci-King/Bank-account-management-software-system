@@ -91,7 +91,7 @@ int main() {
                                     }
                                     case 3: {
                                         cout << "----------------------------------------" << endl;
-                                        //list.fetchNode();
+                                        list.fetchNode();
                                         flag = false;
                                         break;
                                     }

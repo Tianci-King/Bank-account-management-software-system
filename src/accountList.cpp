@@ -299,3 +299,29 @@ void AccountList::sort(bool (*cmp)(const ListNode<Account> &, const ListNode<Acc
         ptr = ptr->getNext();
     }
 }
+
+void AccountList::fetchNode() {
+    // 通过地址实现模糊查询
+    string  temp;
+    ListNode<Account> *ptr = head;
+    bool flag = true;
+
+    cout << "请输入要查的目标账户的关键词" << endl;
+    cin >> temp;
+    while(ptr) {
+        string address = ptr->getData().getName();
+        for (int i = 0; i < address.size(); ++i) {
+            for (int j = 0; j < temp.size(); ++j) {
+                if (address[i] == temp[j] and address[i] != ' ' and temp[j] != ' ') {
+                    cout << *ptr;
+                    flag = false;
+                    return;
+                }
+            }
+        }
+        ptr = ptr->getNext();
+    }
+
+        cout << "未能查询到满足要求的用户" << endl;
+
+}

@@ -22,7 +22,7 @@ void Menu::displayFetchMenu() {
     std::cout << "请输入对应功能前的编号来查询信息" << std::endl
               << "1: 根据姓名进行精确查询" << std::endl
               << "2: 根据ID进行精确查询" << std::endl
-              << "3: 根据家庭住址进行模糊查询" << std::endl
+              << "3: 根据姓名进行模糊查询" << std::endl
               << "0: 返回上级菜单" << std::endl;
     std::cout << ">";
 }
